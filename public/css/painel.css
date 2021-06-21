@@ -1,0 +1,96 @@
+@import
+	url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic")
+	;
+
+@import
+	url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
+	;
+
+/* Profile container */
+.profile {
+	margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+	padding: 20px 0 10px 0;
+	background: #fff;
+}
+
+
+.profile-usermenu ul li {
+	border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+	border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+	color: #93a3b5;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+	margin-right: 8px;
+	font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+	background-color: #fafcfd;
+	color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+	border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+	color: #5b9bd1;
+	background-color: #f6f9fb;
+	border-left: 2px solid #5b9bd1;
+	margin-left: -2px;
+}
+
+a:hover{
+	color: black;
+}
+
+
+body {
+    background: #fff;
+	font-family: 'Roboto', sans-serif;
+	color:#333;
+	line-height: 22px;	
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	color:#111;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+h1, h2, h3 {
+	text-transform:uppercase;
+}
+
+input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=1);    
+}
+
+.form-inline .form-group{
+    margin-left: 0;
+    margin-right: 0;
+}
+.control-label {
+    color:#333333;
+}

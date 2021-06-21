@@ -1,0 +1,1 @@
+close.blade.php

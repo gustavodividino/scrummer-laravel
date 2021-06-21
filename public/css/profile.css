@@ -1,0 +1,392 @@
+@import
+url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic")
+;
+
+@import
+url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
+;
+
+.img {
+            filter: gray; /* IE6-9 */
+            -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+            -webkit-box-shadow: 0 2px 6px 2px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0 2px 6px 2px rgba(0,0,0,0.75);
+            box-shadow: 0 2px 6px 2px rgba(0,0,0,0.75);
+            margin-bottom: 20px;
+        }
+
+
+.text>a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}																	
+
+.event-list {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.event-list>li {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+    padding: 0px;
+    margin: 0px 0px 0px;
+    margin-top: 6px;
+}
+
+.event-list>li>time {
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.event-list>li:nth-child(even)>time {
+    
+}
+
+.event-list>li>time>span {
+    display: inline-block;
+}
+
+.event-list>li time>.points {
+    display: block;
+    font-size: 20pt;
+    font-weight: 900;
+    line-height: 2;
+}
+
+.event-list>li>.info {
+    padding-top: 2px;
+    text-align: center;
+}
+
+.event-list>li>.info>.title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.event-list>li>.info>.desc {
+    text-align: center;
+    font-size: 9pt;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.event-list>li>.info>.date {
+    text-align: center;
+    font-size: 8pt;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.event-list>li>.info>ul, .event-list>li>.social>ul {
+    display: table;
+    list-style: none;
+    margin: 10px 0px 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.event-list>li>.social>ul {
+    margin: 0px;
+}
+
+.event-list>li>.info>ul>li, .event-list>li>.social>ul>li {
+    display: table-cell;
+    cursor: pointer;
+    color: rgb(30, 30, 30);
+    font-size: 11pt;
+    font-weight: 300;
+    padding: 3px 0px;
+}
+
+.event-list>li>.info>ul>li>a {
+    display: block;
+    width: 100%;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+
+.event-list>li>.social>ul>li {
+    padding: 0px;
+}
+
+.event-list>li>.social>ul>li>a {
+    padding: 3px 0px;
+}
+
+.event-list>li>.info>ul>li:hover, .event-list>li>.social>ul>li:hover {
+    color: rgb(30, 30, 30);
+    background-color: rgb(200, 200, 200);
+}
+
+@media ( min-width : 768px) {
+    .event-list>li {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+    }
+    .event-list>li>time, .event-list>li>img {
+        display: inline-block;
+    }
+    .event-list>li>time, .event-list>li>img {
+        width: 90px;
+        float: left;
+    }
+
+    .event-list>li>time, .event-list>li>img {
+        width: 90px;
+        height: 60px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .event-list>li>.info {
+        position: relative;
+        height: 60px;
+        text-align: left;
+        padding-right: 40px;
+    }
+    .event-list>li>.info>.title, .event-list>li>.info>.desc {
+        padding: 0px 10px;
+    }
+    .event-list>li>.info>ul {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    .event-list>li>.social {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: block;
+        width: 40px;
+    }
+    .event-list>li>.social>ul {
+        border-left: 1px solid rgb(230, 230, 230);
+    }
+    .event-list>li>.social>ul>li {
+        display: block;
+        padding: 0px;
+    }
+    .event-list>li>.social>ul>li>a {
+        display: block;
+        width: 40px;
+        padding: 10px 0px 9px;
+    }
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+.activity-feed {
+    padding: 15px;
+}
+
+.activity-feed .feed-item {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border-left: 2px solid #e4e8eb;
+}
+
+.activity-feed .feed-item:last-child {
+    border-color: transparent;
+}
+
+.activity-feed .feed-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #f37167;
+}
+
+.activity-feed .feed-item .date {
+    position: relative;
+    top: -5px;
+    color: #8c96a3;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.activity-feed .feed-item .text {
+    position: relative;
+    top: -3px;
+}
+
+/* Profile container */
+.profile {
+    margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+.profile-achive-points {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: -60px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-top: -35px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+/* PROJECTS */
+.glyphicon {
+    margin-right: 5px;
+}
+
+.section-box h2 {
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-box h2 a {
+    font-size: 13px;
+}
+
+.glyphicon-heart {
+    color: #e74c3c;
+}
+
+.glyphicon-comment {
+    color: #27ae60;
+}
+
+.separator {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.section-box hr {
+    margin-top: 0;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid rgb(199, 199, 199);
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}

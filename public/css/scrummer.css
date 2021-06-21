@@ -1,0 +1,50 @@
+/* FORMs */
+
+.labelForm {
+	font-size: 12px;
+}
+
+/* MAIN */
+
+.tamanho {
+	height: 400px;
+}
+
+.form-control {
+	max-width: 330px;
+}
+
+
+
+
+
+
+/* BOARD */
+
+.item-board {
+	width: 200px;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.item-board:hover {
+	background-color: #428bca;
+	color: white;
+	cursor: move;
+}
+
+.board {
+	height: 510px;
+	overflow-y: auto;
+}
+/* MENU TEAM */
+
+.accordion-toggle:after {
+	font-family: 'FontAwesome';
+	content: "\f078";
+	float: right;
+}
+
+.accordion-opened .accordion-toggle:after {
+	content: "\f054";
+}
